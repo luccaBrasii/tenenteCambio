@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body,
+html,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Russo One', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    background-color: var(--black--);
+    color: var(--white--)
+}
+
+:root {
+    --orange--: #1b7916;
+    --white--: #ededed;
+    --black--: #121212;
+}
+
+.cabecalho a {
+    text-decoration: none;
+    color: white;
+}
+
+#menu {
+    background-color: #121212;
+    z-index: 1;
+}
+
+
+
+.cabecalho {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    width: 40%;
+    margin-left: 200px;
+    align-items: center;
+}
+
+.scorpion {
+    width: 100px;
+}
+
+.logoimg {
+    width: 300px;
+    margin-right: 20px;
+    margin-left: -30px;
+}
+
+.logo span {
+    color: var(--orange--);
+}
+
+.menu {
+    width: 50%;
+    margin-right: 50px;
+}
+
+.menu h3 {
+    cursor: pointer;
+}
+
+.active {
+    border-bottom: 5px solid var(--orange--);
+}
+
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161616;
+}
+
+.texto-inicio {
+    width: 400px;
+    margin: 50px;
+}
+
+.texto-inicio p {
+    text-align: justify;
+    color: rgb(151, 150, 150);
+}
+
+/*CARDS*/
+
+hr {
+    margin-top: 50px;
+    border-color: gray;
+}
+
+.meusCards {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.card__content {
+    left: 0;
+    padding: var(--spacing-l);
+    position: absolute;
+    top: 0;
+    text-align: left;
+}
+
+.card__content h1 {
+    color: var(--white--);
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+}
+
+.card-grid:hover>.card:not(:hover) .card__background {
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+:root {
+    --background-dark: #2d3548;
+    --text-light: rgba(255, 255, 255, 0.6);
+    --text-lighter: rgba(255, 255, 255, 0.9);
+    --spacing-s: 8px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 64px;
+    --width-container: 1200px;
+}
+
+.hero-section {
+    align-items: flex-start;
+    background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: var(--spacing-l);
+    grid-row-gap: var(--spacing-l);
+    max-width: var(--width-container);
+    width: 100%;
+    text-align: justify;
+}
+
+@media(min-width: 540px) {
+    .card-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 960px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card {
+    list-style: none;
+    position: relative;
+    text-align: justify;
+}
+
+.card:before {
+    content: '';
+    display: block;
+    padding-bottom: 150%;
+    width: 100%;
+}
+
+.card__background {
+
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--spacing-l);
+    bottom: 0;
+    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: center;
+    transform: scale(1) translateZ(0);
+    transition:
+        filter 200ms linear,
+        transform 200ms linear;
+}
+
+.card:hover .card__background {
+    transform: scale(1.05) translateZ(0);
+}
+
+.card__category {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-s);
+    text-transform: uppercase;
+}
+
+.card__heading {
+    color: var(--text-lighter);
+    text-align: justify;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    line-height: 1.4;
+    word-spacing: 100vw;
+}
+
+/**/
+
+.servicos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.servicos-cards {
+    display: flex;
+    justify-content: center;
+
+}
+
+.servicos-cards div {
+    margin: 20px;
+    padding: 20px;
+    width: 30%;
+    border-top: 1px solid gray;
+}
+
+.servicos-cards div img {
+    width: 50px;
+}
+
+.servicos-cards div h2 {
+    letter-spacing: 2px;
+}
+
+.servicos-cards div p {
+    color: rgb(159, 159, 159);
+}
+
+.servicos div h1 {
+    font-size: 38px;
+}
+
+/*FORMS*/
+
+.formulario {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #161616;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.form h1 {
+    font-size: 34px;
+    border-bottom: 2px solid var(--orange--);
+}
+
+.form label {
+    margin-top: 20px;
+    color: var(--orange--);
+}
+
+.form input {
+    width: 400px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: none;
+    border-bottom: 2px solid gray;
+    transition: 0.5s;
+}
+
+.form input:focus {
+    transition: 0.5s;
+    outline: none;
+    border-color: var(--orange--);
+}
+
+.texto {
+    padding: 10px;
+    min-height: 200px;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    resize: none;
+    border-radius: 6px;
+    border: 2px solid gray;
+}
+
+.texto:focus {
+    transition: 0.5s;
+    outline: none;
+    border: 2px solid var(--orange--);
+}
+
+
+.form-button {
+    cursor: pointer;
+    width: 80px;
+    margin: 0 20px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+}
+
+.loc {
+    margin-top: 30px;
+}
+
+.loc h1 {
+    border-bottom: 2px solid var(--orange--);
+}
+
+.loc img {
+    width: 50px;
+    margin: 20px;
+}
+
+.loc-info {
+    display: flex;
+    align-items: center;
+
+}
+
+.loc p {
+    color: gray;
+}
+
+.redes {
+    justify-content: center;
+}
+
+.redes h2 {
+    border-bottom: 2px solid var(--orange--);
+}
+
+.redes img {
+    cursor: pointer;
+}
+
+.redes a {
+    text-decoration: none;
+}
+
+/*galeria*/
+
+.galeria {
+    text-align: center;
+}
+
+.galeria h1 {
+    font-size: 38px;
+    margin: 50px 0px;
+}
+
+.galeria video {
+    border-radius: 6px;
+}
+
+.group {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.item {
+    width: 15vw;
+    height: 500px;
+    background-position: center;
+    background-size: 75vh;
+    margin: 1vw;
+    border-radius: 3vw;
+    display: inline-flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+/**/
+
+footer {
+    display: flex;
+    justify-content: center;
+    color: rgb(114, 106, 106);
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+
+@media(max-width: 960px) {
+
+
+
+    .cabecalho {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+
+    }
+
+    .logo {
+        margin-left: 0px;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .menu h3 {
+        margin: 0px 10px;
+        font-size: 16px;
+    }
+
+
+
+    .inicio {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    .texto-inicio {
+        padding: 20px;
+    }
+
+    .imagem-inicio img {
+        width: 430px;
+        margin: 0 auto;
+    }
+
+    .meusCards {
+        display: block;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: auto;
+        margin: 0 20px;
+    }
+
+    .card__content h1 {
+        font-size: 14px;
+    }
+
+    .servicos-cards {
+        display: block;
+    }
+
+    .servicos-cards div {
+        width: auto;
+    }
+
+    .formulario {
+        display: block;
+    }
+
+    .loc {
+        text-align: center;
+    }
+
+    .loc-info {
+        margin-left: 30px;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    #mensagem {
+        width: auto;
+    }
+
+    .card-grid:click>.card:not(:click) .card__background {
+        filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+    }
+
+
+
+
+}
