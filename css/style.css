@@ -385,6 +385,8 @@ hr {
 
 .galeria video {
     border-radius: 6px;
+    width: 640px;
+    height: 360px;
 }
 
 .group {
@@ -504,6 +506,9 @@ footer {
         filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
     }
 
+    .galeria video {
+        width: 100%;
+    }
 
 
 
